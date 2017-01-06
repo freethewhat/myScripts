@@ -1,5 +1,5 @@
-$Path = "C:\Users\msutton\Desktop"
-$Move = "C:\Test Archive"
+$Path = "C:\FilePath"
+$Move = "C:\Archive"
 $Months = 5
 
 
