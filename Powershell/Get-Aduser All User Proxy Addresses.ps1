@@ -1,0 +1,1 @@
+get-aduser -Filter * -Properties samaccountname,proxyaddresses |select samaccountname, @{name="ProxyAddresses";expression={$_.ProxyAddresses -join ";"}} | Export-Csv test.csv

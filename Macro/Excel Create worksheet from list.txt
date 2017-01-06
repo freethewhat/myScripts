@@ -1,0 +1,9 @@
+Dim MyCell As Range, MyRange As Range
+    
+    Set MyRange = Sheets("Summary").Range("A10")
+    Set MyRange = Range(MyRange, MyRange.End(xlDown))
+
+    For Each MyCell In MyRange
+        Sheets.Add After:=Sheets(Sheets.Count) 'creates a new worksheet
+        Sheets(Sheets.Count).Name = MyCell.Value ' renames the new worksheet
+    Next MyCell
