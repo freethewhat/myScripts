@@ -1,1 +1,1 @@
-Get-ADUser -Filter * -Properties scriptpath, homedrive, homedirectory | select name, scriptpath, homedrive, homedirectory | export-csv C:\temp\users2.csv
+Get-ADUser -Filter * -Properties scriptpath, homedrive, homedirectory | select name, SAMAccountName, scriptpath, homedrive, homedirectory | export-csv C:\temp\users2.csv
