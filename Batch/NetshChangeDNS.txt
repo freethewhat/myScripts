@@ -12,3 +12,5 @@ netsh interface ip set dns Local Area Connection 2 static 192.168.25.101
 netsh interface ip add dns Local Area Connection 2 192.168.25.103
 
 test
+
+test change
