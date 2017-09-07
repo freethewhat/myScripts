@@ -1,0 +1,4 @@
+netsh
+dhcp server \\servername
+export c:\temp\dhcpdb all
+import c:\temp\dhcpdb all
