@@ -20,5 +20,7 @@ if (!$list.Contains($licenseUri)) { $list += $licenseUri }
 #Enable message encryption for Office 365.
 Set-IRMConfiguration -LicensingLocation $list
 Set-IRMConfiguration -AzureRMSLicensingEnabled $true -InternalLicensingEnabled $true
+﻿#Enable the Protect button in Outlook on the web (Optional).
+Set-IRMConfiguration -SimplifiedClientAccessEnabled $true
 #Enable server decryption for Outlook on the web, Outlook for iOS, and Outlook for Android.
 Set-IRMConfiguration -ClientAccessServerEnabled $true
