@@ -14,6 +14,7 @@ choco install office365proplus
 choco install discord
 
 # Install Environments
+choco install putty.install
 choco install conemu
 choco install nodejs.install
 choco install bitnami-xampp
