@@ -1,11 +1,11 @@
 Import-Module .\Server_Configuration.ps1 -force
 Import-Module .\Server_Role_Installation.ps1 -force
 
-# @TODO if BWS Standard file server create associated folder automatically and configure DFS
 # @TODO enable access based enumeration
 # @TODO create medkit fabricator
 # @TODO update Server
 
+# Gather required information
 $ComputerName = Read-Host "What is the name of the server?"
 $Roles = Role-Selection
 $DiskSystem = get-disk | where {$_.OperationalStatus -eq "Online"}
@@ -35,6 +35,7 @@ Schedule-Shadow-Copy D 7:00PM
 # Set TimeZone
 Set-TimeZone -Id "Mountain Standard Time"
 write-host -ForegroundColor Green "TimeZone set to MST"
+
 # Enable RDP
 Enable-Remote-Desktop
 
@@ -44,7 +45,9 @@ Disable-IE-Security
 # Enable File Download Internet Explorer
 Enable-IE-File-Downloads
 
+# Install Server Roles
 Role-Installation $Roles
 
+# Rename and Restart Computer
 Rename-Computer $ComputerName
 Restart-Computer
