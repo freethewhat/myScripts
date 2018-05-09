@@ -1,3 +1,8 @@
+#
+# This script is used to configure the guest OS
+# Run this after running the guest deployment script on the guest OS.
+#
+
 Import-Module .\Server_Configuration.ps1 -force
 Import-Module .\Server_Role_Installation.ps1 -force
 

@@ -1,3 +1,9 @@
+#
+# This script is run to deploy a new guest server OS
+# Open in PowerShell ISE on the Host and run the script.
+#
+# Reuirement: Must be in FCCS build network segment
+
 # Maintained OS images on reference server
 $OS = @(
   @{

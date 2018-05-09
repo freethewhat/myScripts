@@ -1,3 +1,8 @@
+#
+# This script is run to configure the host OS for a Hyper-V Server
+# Tor un this open in PowerShell ISE and click run on the physical server
+#
+
 Import-Module .\Server_Configuration.ps1 -force
 Import-Module .\Server_Role_Installation.ps1 -force
 
